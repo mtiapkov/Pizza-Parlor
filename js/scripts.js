@@ -1,8 +1,15 @@
 //Business Logic
-function Pizz(size, toppings) {
+
+//Pizza Logic
+function Pizza(size, toppings) {
   this.size = size,
-  this.toppings = toppings;
+  this.toppings = [toppings]
 }
+
+//Adding Toppings Logic
+
+
+
 
 //User Interface Logic
 $(document).ready(function(event) {
