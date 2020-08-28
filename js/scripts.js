@@ -1,6 +1,6 @@
 //Business Logic
 
-//Pizza Logic
+//Pizza Constructor Logic
 function Pizza(size, firstTopping, secondTopping, thirdTopping) {
   this.size = size,
   this.firstTopping = firstTopping,
@@ -19,28 +19,24 @@ Pizza.prototype.priceOfPizza = function(){
   }
 }
 
-
-
 //Ordered Pizza Method
 function orderedPizza(pizza) {
 $(".pizzaOrder").append(pizza.size + pizza.firstTopping + pizza.secondTopping + pizza.thirdTopping)
 }
 
 
-
-const pizza = new Pizza();  
 //User Interface Logic
 $(document).ready(function() {
   $("form#selectPizza").submit(function(event){
   event.preventDefault();
-
     $(".pizzaOrder").show();
     const pizzaSize = $("#selectSize").val();
-    $(".pizzaOrder").append(pizzaSize + "<br>")
-    $("input:checkbox[name=toppings]:checked").each(function(){
-      const pizzaToppings = $(this).val();
-  });
+    const firstTopping = $("#firstTopping").val();
+    const secondTopping = $("#secondTopping").val()
+    const thirdTopping = $("#thirdTopping").val()
+    const customerOrder = new Pizza(pizzaSize, firstTopping, secondTopping, thirdTopping);
+    orderedPizza(customerOrder)
 
   });
 
-});
+  });
