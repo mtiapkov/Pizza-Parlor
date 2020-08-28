@@ -11,11 +11,11 @@ function Pizza(size, firstTopping, secondTopping, thirdTopping) {
 //Calculating Price Method
 Pizza.prototype.priceOfPizza = function(){
   if (this.size ==='10"') {
-    $(".pizzaOrder").append("Total for your order is $12" + "<br>")
+    $(".pizzaOrder").append("Thank you for eating at Tip's Pizza Place, your order total is $12." + "<br>")
   } else if (this.size === '14"') {
-    $(".pizzaOrder").append("Total for your order is $16" + "<br>")
+    $(".pizzaOrder").append("Thank you for eating at Tip's Pizza Place, your order total is $16." + "<br>")
   } else if (this.size === '18"') {
-    $(".pizzaOrder").append("Total for your order is $18" + "<br>")
+    $(".pizzaOrder").append("Thank you for eating at Tip's Pizza Place, your order total is $18." + "<br>")
   } else {
     $(".pizzaOrder").append("Please select your pie size")
   }
@@ -34,6 +34,7 @@ $(document).ready(function() {
   $("form#selectPizza").submit(function(event){
   event.preventDefault();
     $(".pizzaOrder").show();
+    $("#selectPizza").hide();
     const size = $("#selectSize").val();
     const firstTopping = $("#oneTopping").val();
     const secondTopping = $("#twoTopping").val();

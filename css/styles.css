@@ -1,3 +1,20 @@
 .pizzaOrder {
   display: none;
 }
+
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2020/03/21/02/26/pizza-4952509_960_720.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%
+}
+
+.card, .jumbotron {
+  margin: 12px;
+  padding: 8px;
+  box-sizing: border-box;
+  opacity: 90%;
+  border-style: 5px solid black;
+}
+
+
