@@ -11,96 +11,84 @@
 </head>
 <body>
   <div class="container">
-    <div class="jumbotron text-center">
+    <div class="jumbotron text-center shadow p-3 mb-5 bg-white rounded"">
       <h1 class="display-5">Welcome to Tip's Pizza Place</h1>
       <hr class="my-4">
       <p class="lead">Select your pie size and toppings of your choosing</p>
     </div>
-    <form id="selectPizza">
-      <div class="form-group">
-        <label for="selectSize">Select your pizza size:</label>
-        <select class="form-control" id="selectSize">
-        <option></option>
-        <option>10"</option>
-        <option>14"</option>
-        <option>18"</option>
-        </select>
+    <div class="card shadow p-3 mb-5 bg-white rounded">
+      <div class="card-body">
+        <form id="selectPizza">
+          <div class="form-group">
+            <label for="selectSize">Select your pizza size:</label>
+            <select class="form-control" id="selectSize">
+            <option></option>
+            <option>10"</option>
+            <option>14"</option>
+            <option>18"</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <p>Select your first topping:</p>
+            <select id="oneTopping" class="form-control topping">
+              <option></option>
+            <option>Mozzarella Cheese</option>
+            <option>Feta Cheese</option>
+            <option>Green Peppers</option>
+            <option>Olives</option>
+            <option>Pineapples</option>
+            <option>Olives</option>
+            <option>Mushrooms</option>
+            <option>Pepperoni</option>
+            <option>Italian Sausage</option>
+            <option>Anchovies</option>
+            <option>Ham</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <p>Select your second topping:</p>
+            <select id="twoTopping" class="form-control topping">
+              <option></option>
+            <option>Mozzarella Cheese</option>
+            <option>Feta Cheese</option>
+            <option>Green Peppers</option>
+            <option>Olives</option>
+            <option>Pineapples</option>
+            <option>Olives</option>
+            <option>Mushrooms</option>
+            <option>Pepperoni</option>
+            <option>Italian Sausage</option>
+            <option>Anchovies</option>
+            <option>Ham</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <p>Select your third topping</p>
+            <select id="threeTopping" class="form-control topping">
+            <option></option>
+            <option>Mozzarella Cheese</option>
+            <option>Feta Cheese</option>
+            <option>Green Peppers</option>
+            <option>Olives</option>
+            <option>Pineapples</option>
+            <option>Olives</option>
+            <option>Mushrooms</option>
+            <option>Pepperoni</option>
+            <option>Italian Sausage</option>
+            <option>Anchovies</option>
+            <option>Ham</option>
+            </select>
+          </div>
+          <button type="submit"class="btn btn-dark">Order</button>
+        </form>
+        <div class="pizzaOrder">
+          <br>
+          <p>You ordered the following toppings:</p>
+        </div>
       </div>
-      <div class="form-group">
-        <p>Select your first topping:</p>
-        <select id="oneTopping" class="form-control topping">
-          <option></option>
-        <option>Mozzarella Cheese</option>
-        <option>Feta Cheese</option>
-        <option>Green Peppers</option>
-        <option>Olives</option>
-        <option>Pineapples</option>
-        <option>Olives</option>
-        <option>Mushrooms</option>
-        <option>Pepperoni</option>
-        <option>Italian Sausage</option>
-        <option>Anchovies</option>
-        <option>Ham</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <p>Select your second topping:</p>
-        <select id="twoTopping" class="form-control topping">
-          <option></option>
-        <option>Mozzarella Cheese</option>
-        <option>Feta Cheese</option>
-        <option>Green Peppers</option>
-        <option>Olives</option>
-        <option>Pineapples</option>
-        <option>Olives</option>
-        <option>Mushrooms</option>
-        <option>Pepperoni</option>
-        <option>Italian Sausage</option>
-        <option>Anchovies</option>
-        <option>Ham</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <p>Select your third topping</p>
-        <select id="threeTopping" class="form-control topping">
-        <option></option>
-        <option>Mozzarella Cheese</option>
-        <option>Feta Cheese</option>
-        <option>Green Peppers</option>
-        <option>Olives</option>
-        <option>Pineapples</option>
-        <option>Olives</option>
-        <option>Mushrooms</option>
-        <option>Pepperoni</option>
-        <option>Italian Sausage</option>
-        <option>Anchovies</option>
-        <option>Ham</option>
-        </select>
-      </div>
-      <button type="submit"class="btn btn-dark">Order</button>
-    </form>
-    <div class="pizzaOrder">
-      <p>Your order is:</p>
     </div>
   </div>
   
 </body>
 </html>
 
-
-
-
-
-<!-- <div class="form-group">
-  <input type="checkbox" name="toppings" value="Mozzarella">Mozzarella<br>
-  <input type="checkbox" name="toppings" value="Feta">Feta<br>
-  <input type="checkbox" name="toppings" value="Green-peppers">Green-peppers<br>
-  <input type="checkbox" name="toppings" value="Olives">Olives<br>
-  <input type="checkbox" name="toppings" value="Pineapples">Pineapples<br>
-  <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms<br>
-  <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
-  <input type="checkbox" name="toppings" value="Italian Sausage">Italian Sausage<br>
-  <input type="checkbox" name="toppings" value="Anchovies">Anchovies<br>
-  <input type="checkbox" name="toppings" value="Ham">Ham<br>
-</div>
-<button type="submit" class="btn btn-dark">Select</button> -->
