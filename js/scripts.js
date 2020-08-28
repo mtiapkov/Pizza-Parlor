@@ -20,8 +20,10 @@ Pizza.prototype.priceOfPizza = function(){
 }
 
 //Ordered Pizza Method
-function orderedPizza() {
-$(".pizzaOrder").append(this.size + this.firstTopping + this.secondTopping + this.thirdTopping)
+function orderedPizza(customerOrder) {
+  for (let values of Object.values(customerOrder)) {
+    $(".pizzaOrder").append('${values}<br>');
+  }
 }
 
 
@@ -31,9 +33,9 @@ $(document).ready(function() {
   event.preventDefault();
     $(".pizzaOrder").show();
     const size = $("#selectSize").val();
-    const firstTopping = $("#firstTopping").val();
-    const secondTopping = $("#secondTopping").val();
-    const thirdTopping = $("#thirdTopping").val();
+    const firstTopping = $("#oneTopping").val();
+    const secondTopping = $("#twoTopping").val();
+    const thirdTopping = $("#threeTopping").val();
     const customerOrder = new Pizza(size, firstTopping, secondTopping, thirdTopping);
     orderedPizza(customerOrder);
     customerOrder.priceOfPizza()
