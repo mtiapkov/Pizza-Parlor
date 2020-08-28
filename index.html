@@ -16,7 +16,32 @@
       <hr class="my-4">
       <p class="lead">Select your pie size and toppings of your choosing</p>
     </div>
-    
+    <form id="selectPizza">
+      <div class="form-group">
+        <label for="selectSize">Select your pizza size:</label>
+        <select class="form-control" id="selectSize">
+        <option>10"</option>
+        <option>14"</option>
+        <option>18"</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="checkbox" name="toppings" value="Mozzarella">Mozzarella<br>
+        <input type="checkbox" name="toppings" value="Feta">Feta<br>
+        <input type="checkbox" name="toppings" value="Green-peppers">Green-peppers<br>
+        <input type="checkbox" name="toppings" value="Olives">Olives<br>
+        <input type="checkbox" name="toppings" value="Pineapples">Pineapples<br>
+        <input type="checkbox" name="toppings" value="Mushrooms">Mushrooms<br>
+        <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
+        <input type="checkbox" name="toppings" value="Italian Sausage">Italian Sausage<br>
+        <input type="checkbox" name="toppings" value="Anchovies">Anchovies<br>
+        <input type="checkbox" name="toppings" value="Ham">Ham<br>
+      </div>
+      <button type="submit" class="btn btn-dark">Select</button>
+    </form>
+    <div class="pizzaOrder">
+      <p>Your order is:</p>
+    </div>
   </div>
   
 </body>
