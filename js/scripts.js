@@ -11,13 +11,12 @@ function Pizza(size, firstTopping, secondTopping, thirdTopping) {
 //Calculating Price Method
 Pizza.prototype.priceOfPizza = function(){
   if (this.size ==='10"') {
-      $(".pizzaOrder").append("Total for your order is $12 <br>")
+      $(".pizzaOrder").append("Total for your order is $12" + "<br>")
   } else if (this.size === '14"') {
-      $(".pizzaOrder").append("Total for your order is $16 <br>")
+      $(".pizzaOrder").append("Total for your order is $16" + "<br>")
   } else {
-    $(".pizzaOrder").append("Total for your order is $20 <br>")
+    $(".pizzaOrder").append("Total for your order is $20" + "<br>")
   }
-  console.log(pizza)
 }
 
 //Ordered Pizza Method
@@ -31,13 +30,14 @@ $(document).ready(function() {
   $("form#selectPizza").submit(function(event){
   event.preventDefault();
     $(".pizzaOrder").show();
-    const pizzaSize = $("#selectSize").val();
+    const size = $("#selectSize").val();
     const firstTopping = $("#firstTopping").val();
-    const secondTopping = $("#secondTopping").val()
-    const thirdTopping = $("#thirdTopping").val()
-    const customerOrder = new Pizza(pizzaSize, firstTopping, secondTopping, thirdTopping);
-    orderedPizza(customerOrder)
-
+    const secondTopping = $("#secondTopping").val();
+    const thirdTopping = $("#thirdTopping").val();
+    const customerOrder = new Pizza(size, firstTopping, secondTopping, thirdTopping);
+    orderedPizza(customerOrder);
+    customerOrder.priceOfPizza()
+    console.log(customerOrder)
   });
 
   });
