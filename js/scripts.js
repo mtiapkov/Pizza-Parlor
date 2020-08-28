@@ -1,21 +1,30 @@
 //Business Logic
 
 //Pizza Logic
-function Pizza(size, toppings) {
+function Pizza(size, firstTopping, secondTopping, thirdTopping) {
   this.size = size,
-  this.toppings = [toppings]
+  this.firstTopping = firstTopping,
+  this.secondTopping = secondTopping,
+  this.thirdTopping = thirdTopping
 }
 
-//Adding Toppings Method
-Pizza.prototype.addingToppings = function (toppings) {
-  this.toppings.push(toppings);
+//Calculating Price Method
+Pizza.prototype.priceOfPizza = function(){
+  if (pizza.size ==='10"') {
+      $(".pizzaOrder").append("Total for your order is $12")
+  } else if (pizza.size === '14"') {
+      $(".pizzaOrder").append("Total for your order is $16")
+  } else {
+    $(".pizzaOrder").append("Total for your order is $20")
+  }
 }
+
+
 
 //Ordered Pizza Method
 function orderedPizza(pizza) {
-$(".pizzaOrder").append(pizzaSize + "<br>")
-$(".pizzaOrder").append(pizzaToppings + "<br>")
-q}
+$(".pizzaOrder").append(pizza.size + pizza.firstTopping + pizza.secondTopping + pizza.thirdTopping)
+}
 
 
 
