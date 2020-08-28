@@ -21,8 +21,8 @@ q}
 
 const pizza = new Pizza();  
 //User Interface Logic
-$(document).ready(function(event) {
-  $("form#selectPizza").submmit(function(event){
+$(document).ready(function() {
+  $("form#selectPizza").submit(function(event){
   event.preventDefault();
 
     $(".pizzaOrder").show();
